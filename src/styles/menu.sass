@@ -1,0 +1,52 @@
+@import './base.sass'
+
+.menu-container
+    @include flex(95%, 10%, row)
+    position: fixed
+    align-items: center
+    justify-content: flex-end
+    z-index: 10
+    padding-right: 5%
+    user-select: none
+
+    font-size: 18px
+
+.home
+    height: 15%
+
+@mixin active()
+    border-radius: 20px
+    box-shadow: 0px 0px 5px #141414
+
+    background: $niceBlue
+    color: white
+
+    &::before
+        @include pseudoElement(30%, 100%)
+        background: linear-gradient(to right,rgba(255,255,255,0), rgba(255,255,255,0.4))
+        transform: skewX(45deg)
+        z-index: 2
+
+        animation: 2s shine forwards
+
+.link
+    @include grid(100px, 40%)
+    position: relative
+    overflow: hidden
+    color: white
+
+    &:hover
+        @include active()
+        cursor: pointer
+
+@keyframes shine
+    0%
+        left: -50%
+    100%
+        left: 60%
+
+@media screen and (max-width: 980px)
+    .menu-container
+        height: 8vh
+        font-size: 16px
+        position: relative

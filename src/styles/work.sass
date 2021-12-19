@@ -1,0 +1,93 @@
+@import './base'
+
+
+.work-conatiner
+    @include flex(100%,fit-content,column)
+    min-height: 400px
+    align-items: center
+    
+    .title
+        font-size: 30px
+        color: white
+        padding: 3% 0
+    
+    .work-wrapper
+        @include flex(fit-content,200px,row)
+        justify-content: space-evenly
+        align-items: center
+
+        .text
+            @include flex(fit-content,100%,column)
+            justify-content: center
+            gap: 10px
+
+            .name
+                color: $niceBlue
+                font-size: 25px
+
+            .time
+                color: white
+                font-size: 15px
+        
+            .skills
+                @include flex(100%,fit-content,row)
+
+                .skill
+                    font-size: 14px
+                    color: black
+                    background: $niceBlue
+                    border-radius: 10px
+                    padding: 5px 10px
+                    margin: 0 10px
+
+            .description
+                font-size: 14px
+                color: white
+
+        img
+            height: 120px
+            border-radius: 50%
+            margin-right: 20px
+
+@media screen and (max-width: 980px)
+    .work-conatiner
+        width: 100%
+        margin: 0
+
+        .title
+            font-size: 20px
+
+        .work-wrapper
+            width: 90%
+            flex-direction: column
+            align-self: center    
+
+            .text
+                align-items: center
+
+                .name
+                    font-size: 18px
+
+                .time
+                    color: white
+                    font-size: 12px
+            
+                .skills
+                    justify-content: center
+                    .skill
+                        font-size: 10px
+                        color: black
+                        background: $niceBlue
+                        border-radius: 10px
+                        padding: 3px 8px
+                        margin: 0 2px
+
+                .description
+                    font-size: 12px
+                    text-align: center
+                    color: white
+
+            img
+                height: 90px
+                border-radius: 50%
+                margin-right: 0px

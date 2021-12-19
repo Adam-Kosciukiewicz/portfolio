@@ -1,0 +1,95 @@
+@import './base'
+
+
+
+.projects-conatiner
+    @include flex(90%, fit-content, column)
+    align-items: center
+
+    margin: 10vh 0
+
+    // background: linear-gradient(70deg, #16033a 0%, #22115a 50%, #b60000 100%)
+    
+    // box-shadow: 0px 0px 10px 3px black
+
+    .title
+        font-size: 30px
+        color: white
+
+    .projects-wrapper
+        @include flex(100%, fit-content, column)
+        align-items: center
+
+        .project
+            @include flex(100%, 500px, row)
+            position: relative
+            justify-content: center
+            align-items: center
+
+            .frame
+                @include flex(50%, 60%, column)
+                justify-content: center
+                box-shadow: 0px 0px 5px 3px #00000034
+
+                overflow: hidden
+                border-radius: 10px
+                background: red
+
+                position: absolute
+                left: 10%
+
+                img
+                    height: 100%
+                    object-fit: cover
+
+                .skills
+                    @include flex(100%, 10%, row)
+                    justify-content: center
+                    align-items: center
+                    border-radius: 10px
+
+                    img
+                        height: 50%
+                        width: auto
+                        
+
+            .description
+                @include flex(40%, 45%, column)
+                align-items: center
+
+                position: absolute
+                right: 10%
+
+                border-radius: 10px
+                box-shadow: 0px 0px 5px 3px #00000034
+
+                background: #22115a
+                color:  white
+                
+                .title
+                    font-size: 20px
+                    border-bottom: 2px solid $niceBlue
+                    height: 10%
+                    margin: 5% 0 2% 0
+
+                .skills
+                    @include flex(100%,fit-content,row)
+                    justify-content: center
+
+                    .skill
+                        @include grid(80px, 20px)
+                        font-size: 14px
+                        border-radius: 10px
+                        background: white
+                        color: #22115a
+                        margin: 0 10px
+                    
+                .text
+                    font-size: 12px
+                    margin: 2% 10%
+                    color: #c5c5c5
+                   
+
+
+                
+

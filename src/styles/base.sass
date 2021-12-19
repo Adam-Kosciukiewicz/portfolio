@@ -1,0 +1,58 @@
+@import url('https://unpkg.com/browse/react@17.0.2/')
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap')
+//font-family: 'Merriweather', serif;
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap')
+//font-family: 'Lato', sans-serif;
+@font-face 
+    font-family: Metropolis
+    src: url('./metropolis.medium.otf') format("opentype")
+
+$niceBlue: #3340FF
+$lightNiceBlue: #6b74ff
+
+
+@mixin flex($width, $height, $direction)
+    width: $width
+    height: $height
+
+    display: flex
+    flex-direction: $direction
+
+@mixin grid($width, $height)
+    width: $width
+    height: $height
+
+    display: grid
+    place-items: center
+
+@mixin pseudoElement($width,$height)
+    position: absolute
+    width: $width
+    height: $height
+
+    content: ''
+
+.app-container
+    @include flex(100%,fit-content,column)
+    align-items: center
+    font-family: Metropolis
+    background: linear-gradient(34deg, rgba(0,5,64,1) 0%, rgba(0,2,27,1) 37%, rgba(0,0,0,1) 100%)
+
+    overflow-y: scroll
+    // //scroll-behavior: smooth
+
+    // user-select: none
+
+
+////////////////////////////////////////
+body
+    -webkit-font-smoothing: antialiased
+
+::-webkit-scrollbar
+    width: 10px
+
+::-webkit-scrollbar-thumb
+    background: grey
+
+::-webkit-scrollbar-track
+    background: black

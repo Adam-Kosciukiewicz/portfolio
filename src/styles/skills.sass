@@ -1,0 +1,75 @@
+@import './base.sass'
+
+.skills-container
+    @include flex(90%, fit-content, row)
+    min-height: 500px
+    align-items: center
+    justify-content: center
+
+    margin: 10vh 0
+
+    background: linear-gradient(70deg, #16033a 0%, #22115a 50%, #b60000 100%)
+    
+    box-shadow: 0px 0px 10px 3px black
+
+    border-radius: 3px 
+
+    .description
+        @include flex(40%, 100%, column)
+        
+        .title
+            font-size: 30px
+            color: white
+            margin-bottom: 10px
+        .text
+            font-size: 12px
+            color: #c5c5c5
+
+
+
+.skills-wrapper
+    @include flex(50%, 100%, row)
+    justify-content: center
+    align-items: center
+    flex-wrap: wrap
+    gap: 10px
+
+    .skill
+        @include grid(130px, 130px)
+        color: white
+        box-sizing: border-box
+        //background: #0000006c
+        background: rgba(0,0,0,0.3)
+        border-radius: 2%
+        backdrop-filter: blur(2px)
+
+        img
+            width: 50%
+            object-fit: contain
+
+        .label
+
+@media screen and (max-width: 980px)
+    .skills-container
+        width: 100%
+        flex-direction: column
+        align-items: center
+
+        .description
+            width: 80%
+            height: fit-content
+            align-items: center
+            margin: 20px
+
+            .title
+                margin: 15px 0
+                font-size: 20px
+            .text
+                margin: 5px 0
+                font-size: 14px
+        .skills-wrapper
+            width: 90%
+            margin: 10px 0 30px 0 
+            .skill
+                width: 90px
+                height: 90px

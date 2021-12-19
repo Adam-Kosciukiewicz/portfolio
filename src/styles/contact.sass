@@ -1,0 +1,98 @@
+@import './base'
+
+.contact-conatiner
+    @include flex(50%,fit-content,column)
+    min-height: 200px
+    margin: 10vh 0
+
+    align-items: center
+
+    background: linear-gradient(to right, #5e5e5e1a, #00000041)
+
+    .title
+        font-size: 25px
+        margin: 20px 0
+        color: white
+
+    .to-coppy
+        &:before
+            @include grid(130px,20px)
+            position: absolute
+            display: none
+            content: 'naciśnij aby skopiować'
+            top: -20px
+            left: 20%
+
+            border-radius: 10px
+            background: #000000
+            color: white
+            font-size: 10px
+
+    .row 
+        @include flex(70%, 25px, row)
+        position: relative
+        align-items: center
+        margin-top: 10px 
+
+        color: #979797
+        font-size: 18px
+
+        &:hover
+            cursor: pointer
+            color: #c2c2c2
+            &::before
+                display: grid
+
+        img
+            height: 18px
+            margin-right: 5px
+
+    .button
+        @include grid(50%, 35px)
+        position: relative
+        margin: 15px 0
+
+        border-radius: 15px
+        background: #ffa500
+
+        box-shadow: 0px 0px 5px #0e0e0e
+        
+        z-index: 1
+        
+        overflow: hidden
+        transition: 0.1s
+
+        &:hover
+            cursor: pointer
+            box-shadow: 0px 0px 5px #1b0000
+            
+            &::before
+                display: none
+
+        img
+            height: 80%
+
+        &::before
+            @include pseudoElement(30%, 100%)
+            background: linear-gradient(to right,rgba(255,255,255,0.1), rgba(255,255,255,0.4))
+            transform: skewX(45deg)
+            z-index: 2
+
+            animation: 2.5s shine infinite
+
+@media screen and (max-width: 980px)
+    .contact-conatiner
+        width: 100%
+        margin: 0
+
+        .title
+            font-size: 20px
+            margin: 20px 0
+            color: white
+
+        .row
+            width: 70%
+            font-size: 14px
+
+        img
+            height: 14px

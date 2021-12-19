@@ -1,0 +1,51 @@
+@import './base.sass'
+
+.resume-container
+    @include grid(100%,fit-content)
+    position: relative
+    background: none
+
+    .button
+        position: fixed
+        @include grid(10%, 5%)
+        top: 90%
+        left: 85%
+
+        background: #313030
+        color: black
+        font-size: 16px
+        border-radius: 10px
+
+    .resume-wrapper
+        @include flex(100%,100%,row)
+        align-items: center
+
+        margin: 30px 0
+
+        transition: 1s
+
+
+        background: linear-gradient(129deg, rgba(0,0,0,1) 0%, rgba(37,37,37,1) 51%, rgba(75,75,75,1) 100%)
+        color: white
+
+        .left
+            @include flex(30%,100%,column)
+            align-items: center
+
+        .right
+            @include flex(70%,95%,column)
+            justify-content: space-evenly
+
+            background: #e6e6e6
+
+            border-top-left-radius: 20px
+            border-bottom-left-radius: 20px
+
+            box-shadow: 0px 0px 5px 1px black
+
+
+    .z-in
+    
+    .z-out
+            
+            
