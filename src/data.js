@@ -9,15 +9,15 @@ export const skills = [
     'HTML',
     'CSS',
     'SASS',
+    'tailwind',
     'JavaScript',
     'TypeScript',
     'jQuery',
     'React',
     'Node',
+    'express',
     'MongoDB',
     'git',
-    'tailwind',
-    'express',
 ]
 
 export const projects = [

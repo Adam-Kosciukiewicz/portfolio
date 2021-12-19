@@ -1,14 +1,26 @@
-@import url('https://unpkg.com/browse/react@17.0.2/')
+//-------------------------------------------------------------------------------
+// -------------- Fonts
+//-------------------------------------------------------------------------------
 @import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap')
 //font-family: 'Merriweather', serif;
+
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap')
 //font-family: 'Lato', sans-serif;
+
 @font-face 
     font-family: Metropolis
     src: url('./metropolis.medium.otf') format("opentype")
 
+//-------------------------------------------------------------------------------
+// -------------- Variables
+//-------------------------------------------------------------------------------
+
 $niceBlue: #3340FF
 $lightNiceBlue: #6b74ff
+
+//-------------------------------------------------------------------------------
+// -------------- Mixins
+//-------------------------------------------------------------------------------
 
 
 @mixin flex($width, $height, $direction)
@@ -32,6 +44,10 @@ $lightNiceBlue: #6b74ff
 
     content: ''
 
+//-------------------------------------------------------------------------------
+// -------------- Main container
+//-------------------------------------------------------------------------------
+
 .app-container
     @include flex(100%,fit-content,column)
     align-items: center
@@ -39,14 +55,14 @@ $lightNiceBlue: #6b74ff
     background: linear-gradient(34deg, rgba(0,5,64,1) 0%, rgba(0,2,27,1) 37%, rgba(0,0,0,1) 100%)
 
     overflow-y: scroll
-    // //scroll-behavior: smooth
 
-    // user-select: none
-
-
-////////////////////////////////////////
 body
     -webkit-font-smoothing: antialiased
+
+
+//-------------------------------------------------------------------------------
+// -------------- Scroll
+//-------------------------------------------------------------------------------
 
 ::-webkit-scrollbar
     width: 10px
