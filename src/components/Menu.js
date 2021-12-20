@@ -6,11 +6,11 @@ import { menuLinks } from "../data";
 const Menu = ({scroll}) =>{
     console.log(scroll)
     return(
-        <div className={`${scroll < 500 ? 'home' : ''} menu-container`}>
+        <div className={`${scroll < 100 ? 'home' : ''} menu-container`}>
             {
                 menuLinks.map(link=>
-                    <div className='link' key={link.name}>
-                        <div className='text'>{link.name}</div>
+                    <div className='link' key={link}>
+                        <a href={`#${link.toLowerCase()}`} className='text'>{link}</a>
                     </div>
                 )
             }

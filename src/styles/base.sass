@@ -49,14 +49,17 @@ $lightNiceBlue: #6b74ff
 //-------------------------------------------------------------------------------
 
 .app-container
-    @include flex(100%,fit-content,column)
+    @include flex(100%, fit-content, column)
     align-items: center
     font-family: Metropolis
     background: linear-gradient(34deg, rgba(0,5,64,1) 0%, rgba(0,2,27,1) 37%, rgba(0,0,0,1) 100%)
-
-    overflow-y: scroll
+    scroll-behavior: smooth
 
 body
+    scroll-behavior: smooth
+
+html
+    scroll-behavior: smooth
     -webkit-font-smoothing: antialiased
 
 

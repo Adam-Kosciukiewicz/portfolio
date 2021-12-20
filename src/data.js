@@ -1,23 +1,23 @@
 export const menuLinks = [
-    { name:'Home', scrollFrom: 0, scrollTo: 500},
-    { name:'O mnie', scrollFrom: 500, scrollTo: 1200},
-    { name:'Projekty', scrollFrom: 1200, scrollTo: 5400},
-    { name:'Kontakt', scrollFrom: 5400, scrollTo: 5500},
+    'Home',
+    'Umiejętości',
+    'Projekty',
+    'Kontakt',
 ]
 
 export const skills = [
-    'HTML',
-    'CSS',
-    'SASS',
-    'tailwind',
-    'JavaScript',
-    'TypeScript',
-    'jQuery',
-    'React',
-    'Node',
-    'express',
-    'MongoDB',
-    'git',
+    {name:'HTML', link:'https://html.com/'},
+    {name:'CSS', link:'https://developer.mozilla.org/en-US/docs/Web/CSS'},
+    {name:'SASS', link:'https://sass-lang.com/'},
+    {name:'tailwind', link:'https://tailwindcss.com/'},
+    {name:'JavaScript', link:'https://www.javascript.com/'},
+    {name:'TypeScript', link:'https://www.typescriptlang.org/'},
+    {name:'jQuery', link:'https://jquery.com/'},
+    {name:'React', link:'https://reactjs.org/'},
+    {name:'Node', link:'https://nodejs.org/en/'},
+    {name:'express', link:'https://expressjs.com/'},
+    {name:'MongoDB', link:'https://www.mongodb.com/'},
+    {name:'git', link:'https://git-scm.com/'},
 ]
 
 export const projects = [

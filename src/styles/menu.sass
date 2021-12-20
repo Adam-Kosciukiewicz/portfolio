@@ -12,9 +12,13 @@
     user-select: none
 
     font-size: 18px
+    background: rgba(0,2,27,0.8)
+    backdrop-filter: blur(2px)
+    transition: 1s
 
 .home
     height: 15%
+    background: none
 
 @mixin active()
     box-shadow: 0px 0px 5px #141414
@@ -33,11 +37,16 @@
         animation: 2s shine forwards
 
 .link
-    @include grid(100px, 40%)
+    @include grid(110px, 40%)
     position: relative
+    margin: 0 5px
 
     overflow: hidden
-    color: white
+    
+
+    .text
+        text-decoration: none
+        color: white
 
     &:hover
         @include active()

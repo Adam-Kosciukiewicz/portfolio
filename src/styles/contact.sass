@@ -7,7 +7,9 @@
 
     align-items: center
 
-    background: linear-gradient(to right, #5e5e5e1a, #00000041)
+    //background: linear-gradient(to right, #5e5e5e1a, #00000041)
+    background: none
+    justify-content: center
 
     .title
         font-size: 25px
@@ -21,7 +23,7 @@
             display: none
             content: 'kliknij aby skopiować'
             top: -20px
-            left: 20%
+            left: 35%
 
             border-radius: 10px
             background: #000000
@@ -32,14 +34,15 @@
         @include flex(70%, 25px, row)
         position: relative
         align-items: center
+        justify-content: center
         margin-top: 10px 
 
-        color: #979797
+        color: #adadad
         font-size: 18px
 
         &:hover
             cursor: pointer
-            color: #c2c2c2
+            color: $lightNiceBlue
             &::before
                 display: grid
 

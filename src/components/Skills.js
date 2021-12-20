@@ -23,9 +23,14 @@ const Skills = () =>{
             <div className='skills-wrapper'>
                 {
                     skills.map(skill=>
-                    <div key={skill} className='skill' data-aos='fade-up'>
-                        <img alt='skill' src={`./assets/${skill}.png`} />
-                        <div className='label'>{skill}</div>
+                    <div 
+                        data-aos='fade-up'
+                        className='skill'
+                        onClick={()=> window.open(skill.link,'_blank')} 
+                        key={skill.name}
+                    >
+                        <img alt='skill' src={`./assets/${skill.name}.png`} />
+                        <div className='label'>{skill.name}</div>
                     </div>)
                 }
             </div>

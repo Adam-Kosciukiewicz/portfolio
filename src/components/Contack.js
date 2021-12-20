@@ -24,17 +24,17 @@ const Contact = ({setResume}) =>{
 
             <div className='row to-coppy' onClick={() => navigator.clipboard.writeText(contactData.email)}>
                 <img src='./assets/email.svg' alt='icon'/>
-                <div className='label'>{`Email: ${contactData.email}`}</div>
+                <div className='label'>{contactData.email}</div>
             </div>
 
             <div className='row to-coppy' onClick={() => navigator.clipboard.writeText(contactData.phone)}>
                 <img src='./assets/phone.svg' alt='icon'/>
-                <div className='label'>{`Telefon: ${contactData.phone}`}</div>
+                <div className='label'>{contactData.phone}</div>
             </div>
 
             <div className='row' onClick={() => window.open(contactData.github, '_blank')}>
                 <img src='./assets/github.png' alt='icon'/>
-                <div className='label'>{`Github: ${contactData.github.split('//')[1]}`}</div>
+                <div className='label'>{contactData.github.split('//')[1]}</div>
             </div>
 
             <div className='button' onClick={()=> setResume(true)}>Obejrzyj moje CV</div>

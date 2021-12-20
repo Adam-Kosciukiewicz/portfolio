@@ -13,12 +13,13 @@ const Projects = () => {
         });
     },[])
     return(
-        <div className='projects-conatiner'
-            data-aos='zoom-in'
-            data-aos-anchor-placement="center-bottom"
-        >
+        <div className='projects-conatiner' id='projekty'>
             <div className='title'>Projekty</div>
-            <div className='projects-wrapper'>
+            <div 
+                className='projects-wrapper' 
+                data-aos='zoom-in'
+                data-aos-anchor-placement="center-bottom"
+            >
                 {
                     projects.map(project=>
                         <div className='project' key='project'>
@@ -29,7 +30,7 @@ const Projects = () => {
                             <div className='description'>
                                 <div className='title'>{project.name}</div>
                                 <div className='skills'>
-                                    {project.skills.map(skill=><div className='skill'>{skill}</div>)}
+                                    {project.skills.map(skill=><div className='skill' key={skill}>{skill}</div>)}
                                 </div>
                                 <div className='text'>{project.description}</div>
                             </div>

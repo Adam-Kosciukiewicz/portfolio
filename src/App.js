@@ -1,4 +1,5 @@
-import React, { useRef } from 'react'
+/* eslint-disable react-hooks/exhaustive-deps */
+import React, { useEffect, useState } from 'react'
 
 import './styles/base.sass'
 
@@ -10,16 +11,21 @@ import Home from './components/Home'
 import Work from './components/Work'
 
 const App = () => {
-  const AppRef = useRef(App)
-  //const [scroll, setScroll] = useState(0)
+  const [scroll, setScroll] = useState(0)
 
+  const html = document.getElementsByTagName('html')[0]
+
+  
+  useEffect(()=>{
+    const event = () => setScroll(html.scrollTop)
+    
+    window.addEventListener('scroll', event)
+    
+    return () => window.removeEventListener('scroll',event)
+  },[])
   return (
-    <div 
-      onScroll={()=> console.log(AppRef.current.scrollTop)}//setScroll(AppRef.current.scrollTop)
-      className="app-container" 
-      ref={AppRef} 
-    >
-      <Menu></Menu>
+    <div className="app-container">
+      <Menu scroll={scroll}></Menu>
       <Home></Home>
       <Skills></Skills>
       <Work></Work>
