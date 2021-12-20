@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/pofrtolio/static/css/main.d60dc3bb.chunk.css",
-    "main.js": "/pofrtolio/static/js/main.1c5ee051.chunk.js",
-    "main.js.map": "/pofrtolio/static/js/main.1c5ee051.chunk.js.map",
-    "runtime-main.js": "/pofrtolio/static/js/runtime-main.959e481a.js",
-    "runtime-main.js.map": "/pofrtolio/static/js/runtime-main.959e481a.js.map",
-    "static/css/2.7fc9bc2b.chunk.css": "/pofrtolio/static/css/2.7fc9bc2b.chunk.css",
-    "static/js/2.f1810a84.chunk.js": "/pofrtolio/static/js/2.f1810a84.chunk.js",
-    "static/js/2.f1810a84.chunk.js.map": "/pofrtolio/static/js/2.f1810a84.chunk.js.map",
-    "index.html": "/pofrtolio/index.html",
-    "static/css/2.7fc9bc2b.chunk.css.map": "/pofrtolio/static/css/2.7fc9bc2b.chunk.css.map",
-    "static/css/main.d60dc3bb.chunk.css.map": "/pofrtolio/static/css/main.d60dc3bb.chunk.css.map",
-    "static/js/2.f1810a84.chunk.js.LICENSE.txt": "/pofrtolio/static/js/2.f1810a84.chunk.js.LICENSE.txt",
-    "static/media/work.sass": "/pofrtolio/static/media/metropolis.medium.cdcce862.otf"
+    "main.css": "/portfolio/static/css/main.56846721.chunk.css",
+    "main.js": "/portfolio/static/js/main.eabac20c.chunk.js",
+    "main.js.map": "/portfolio/static/js/main.eabac20c.chunk.js.map",
+    "runtime-main.js": "/portfolio/static/js/runtime-main.5f872348.js",
+    "runtime-main.js.map": "/portfolio/static/js/runtime-main.5f872348.js.map",
+    "static/css/2.7fc9bc2b.chunk.css": "/portfolio/static/css/2.7fc9bc2b.chunk.css",
+    "static/js/2.13250221.chunk.js": "/portfolio/static/js/2.13250221.chunk.js",
+    "static/js/2.13250221.chunk.js.map": "/portfolio/static/js/2.13250221.chunk.js.map",
+    "index.html": "/portfolio/index.html",
+    "static/css/2.7fc9bc2b.chunk.css.map": "/portfolio/static/css/2.7fc9bc2b.chunk.css.map",
+    "static/css/main.56846721.chunk.css.map": "/portfolio/static/css/main.56846721.chunk.css.map",
+    "static/js/2.13250221.chunk.js.LICENSE.txt": "/portfolio/static/js/2.13250221.chunk.js.LICENSE.txt",
+    "static/media/work.sass": "/portfolio/static/media/metropolis.medium.cdcce862.otf"
   },
   "entrypoints": [
-    "static/js/runtime-main.959e481a.js",
+    "static/js/runtime-main.5f872348.js",
     "static/css/2.7fc9bc2b.chunk.css",
-    "static/js/2.f1810a84.chunk.js",
-    "static/css/main.d60dc3bb.chunk.css",
-    "static/js/main.1c5ee051.chunk.js"
+    "static/js/2.13250221.chunk.js",
+    "static/css/main.56846721.chunk.css",
+    "static/js/main.eabac20c.chunk.js"
   ]
 }
