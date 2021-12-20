@@ -11,6 +11,7 @@ const Home = () =>{
             </div>
             <div className='content'>
                 <div className='title'>Junior Front-End Developer</div>
+                <div className='sub-title'>Adam Kościukiewicz</div>
                 <div className='fast-access-mobile'>
                     <img alt='icon' src='./assets/github.png'></img>
                     <img alt='icon' src='./assets/resume.svg'></img>

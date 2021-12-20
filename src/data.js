@@ -33,7 +33,7 @@ export const projects = [
             'background.jpg',
             'background.jpg',
         ],
-        description: 'super strona super strona super strona super strona super strona super strona super strona',
+        description: 'Strona przedstawiająca drużyny, wyniki meczy i rankingi z sezonu Europejskiej Ligi Futbolu, generowane na podstawie autorskiego API przesyłanego przez serwer napisany w ekspresie',
     }
 ]
 
