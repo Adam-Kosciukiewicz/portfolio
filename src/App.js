@@ -1,5 +1,5 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 
 import './styles/base.sass'
 
@@ -12,6 +12,11 @@ import Work from './components/Work'
 
 const App = () => {
   const [scroll, setScroll] = useState(0)
+  const project = useRef()
+  const contact = useRef()
+  const skills = useRef()
+  const home = useRef()
+  const work = useRef()
 
   const html = document.getElementsByTagName('html')[0]
 
@@ -23,14 +28,23 @@ const App = () => {
     
     return () => window.removeEventListener('scroll',event)
   },[])
+
+ 
   return (
     <div className="app-container">
-      <Menu scroll={scroll}></Menu>
-      <Home></Home>
-      <Skills></Skills>
-      <Work></Work>
-      <Project></Project>
-      <Contact></Contact>
+      <Menu 
+        scroll={scroll}
+        home={home} 
+        skills={skills}
+        work={work} 
+        project={project} 
+        contact={contact}
+      ></Menu>
+      <Home forwardRef={home} next={skills}></Home>
+      <Skills forwardRef={skills}></Skills>
+      <Work forwardRef={work}></Work>
+      <Project forwardRef={project}></Project>
+      <Contact forwardRef={contact}></Contact>
     </div>
   );
 }

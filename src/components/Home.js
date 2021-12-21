@@ -2,9 +2,9 @@ import React from "react";
 
 import '../styles/home.sass'
 
-const Home = () =>{
+const Home = ({forwardRef, next}) => {
     return(
-        <div className='home-container'>
+        <div className='home-container' ref={forwardRef}>
             <div className='fast-access'>
                 <img alt='icon' src='./assets/github.png'></img>
                 <img alt='icon' src='./assets/resume.svg'></img>
@@ -16,7 +16,10 @@ const Home = () =>{
                     <img alt='icon' src='./assets/github.png'></img>
                     <img alt='icon' src='./assets/resume.svg'></img>
                 </div>
-                <div className='button'>
+                <div 
+                    onClick={() => next.current.scrollIntoView({ block: 'center', behavior: 'smooth' })}
+                    className='button'
+                >
                     <img alt='button' src='./assets/arrow.svg'></img>
                 </div>
             </div>

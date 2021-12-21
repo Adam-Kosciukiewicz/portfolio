@@ -6,14 +6,14 @@ import { skills } from '../data'
 import '../styles/skills.sass'
 import 'aos/dist/aos.css'
 
-const Skills = () =>{
+const Skills = ({forwardRef}) =>{
     useEffect(()=>{
         Aos.init({
             duration:1000
         });
     },[])
     return(
-        <div className='skills-container'>
+        <div className='skills-container' ref={forwardRef}>
             <div className='description' data-aos='fade-up'>
                 <div className='title'>Umiejętości</div>
                 <div className='text'>

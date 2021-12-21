@@ -6,7 +6,7 @@ import { employment } from '../data'
 import '../styles/work.sass'
 import 'aos/dist/aos.css'
 
-const Work = () =>{
+const Work = ({forwardRef}) =>{
     useEffect(()=>{
         Aos.init({
             duration:1000
@@ -17,6 +17,7 @@ const Work = () =>{
             className='work-conatiner'
             data-aos='zoom-in'
             data-aos-anchor-placement="center-bottom"
+            ref={forwardRef}
         >
             <div className='title'>Doświadczenie zawodowe</div>
 

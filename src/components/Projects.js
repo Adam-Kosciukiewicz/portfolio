@@ -6,14 +6,14 @@ import { projects } from '../data'
 import '../styles/projects.sass'
 import 'aos/dist/aos.css'
 
-const Projects = () => {
+const Projects = ({forwardRef}) => {
     useEffect(()=>{
         Aos.init({
             duration:1000
         });
     },[])
     return(
-        <div className='projects-conatiner' id='projekty'>
+        <div className='projects-conatiner' ref={forwardRef}>
             <div className='title'>Projekty</div>
             <div 
                 className='projects-wrapper' 

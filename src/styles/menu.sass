@@ -11,7 +11,7 @@
     z-index: 10
     user-select: none
 
-    font-size: 18px
+    font-size: 16px
     background: rgba(0,2,27,0.8)
     backdrop-filter: blur(2px)
     transition: 1s
@@ -35,11 +35,15 @@
         z-index: 2
 
         animation: 2s shine forwards
+.active
+    @include active()
 
 .link
-    @include grid(110px, 40%)
+    @include grid(120px, 40px)
     position: relative
     margin: 0 5px
+
+    transition: 1s
 
     overflow: hidden
     
@@ -62,4 +66,4 @@
     .menu-container
         height: 8vh
         position: relative
-        font-size: 16px
+        font-size: 12px

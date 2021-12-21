@@ -1,8 +1,9 @@
 export const menuLinks = [
-    'Home',
-    'Umiejętości',
-    'Projekty',
-    'Kontakt',
+    {name:'Home', scrollTo: 'home'},
+    {name:'Umiejętości', scrollTo: 'skills'},
+    {name:'Doświadczenie', scrollTo: 'work'},
+    {name:'Projekty', scrollTo: 'project'},
+    {name:'Kontakt', scrollTo: 'contact'},
 ]
 
 export const skills = [

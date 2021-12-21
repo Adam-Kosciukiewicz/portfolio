@@ -6,7 +6,7 @@ import { contactData } from '../data'
 import '../styles/contact.sass'
 import 'aos/dist/aos.css'
 
-const Contact = ({setResume}) =>{
+const Contact = ({forwardRef}) =>{
 
     useEffect(()=>{
         Aos.init({
@@ -19,6 +19,7 @@ const Contact = ({setResume}) =>{
             className='contact-conatiner'
             data-aos='zoom-in'
             data-aos-anchor-placement="center-bottom"
+            ref={forwardRef}
         >
             <div className='title'>Kontakt</div>
 
@@ -37,7 +38,7 @@ const Contact = ({setResume}) =>{
                 <div className='label'>{contactData.github.split('//')[1]}</div>
             </div>
 
-            <div className='button' onClick={()=> setResume(true)}>Obejrzyj moje CV</div>
+            <div className='button'>Obejrzyj moje CV</div>
         </div>
     )
 }
