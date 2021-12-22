@@ -3,6 +3,7 @@ import React, { useEffect, useState, useRef } from 'react'
 
 import './styles/base.sass'
 
+import PhoneMenu from './components/PhoneMenu'
 import Project from './components/Projects'
 import Contact from './components/Contack'
 import Skills from './components/Skills'
@@ -11,6 +12,7 @@ import Home from './components/Home'
 import Work from './components/Work'
 
 const App = () => {
+  const [showMenu, setShowMenu] = useState(false)
   const [scroll, setScroll] = useState(0)
   const project = useRef()
   const contact = useRef()
@@ -33,18 +35,35 @@ const App = () => {
   return (
     <div className="app-container">
       <Menu 
-        scroll={scroll}
-        home={home} 
-        skills={skills}
-        work={work} 
-        project={project} 
-        contact={contact}
+          scroll={scroll}
+          home={home} 
+          skills={skills}
+          work={work} 
+          project={project} 
+          contact={contact}
+          setShowMenu={setShowMenu}
+          showMenu={showMenu}
       ></Menu>
-      <Home forwardRef={home} next={skills}></Home>
-      <Skills forwardRef={skills}></Skills>
-      <Work forwardRef={work}></Work>
-      <Project forwardRef={project}></Project>
-      <Contact forwardRef={contact}></Contact>
+      {
+        showMenu ? 
+        <PhoneMenu
+          home={home} 
+          skills={skills}
+          work={work} 
+          project={project} 
+          contact={contact}
+          setShowMenu={setShowMenu}
+        ></PhoneMenu>
+        :
+        null
+      }
+      <>
+        <Home forwardRef={home} next={skills}></Home>
+        <Skills forwardRef={skills}></Skills>
+        <Work forwardRef={work}></Work>
+        <Project forwardRef={project}></Project>
+        <Contact forwardRef={contact}></Contact>
+      </>
     </div>
   );
 }

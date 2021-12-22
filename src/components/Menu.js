@@ -6,9 +6,8 @@ import { menuLinks } from "../data";
 const Menu = (props) => {
 
     const [current, setCurrent] = useState('home')
-
     useEffect(()=>{
-        let refArray = Object.entries(props).filter(elem => typeof elem[1] !== 'number')
+        let refArray = Object.entries(props).filter(elem => typeof elem[1] === 'object')
 
 
         refArray.forEach(ref => {
@@ -23,26 +22,32 @@ const Menu = (props) => {
 
     const handleClick = (to) => {
         props?.[to].current.scrollIntoView({
-            behavior: 'smooth',block: 'center'
+            behavior: 'smooth', block: 'center'
         })
 
         setCurrent(to)
     }
 
     return(
-        <div className={`${props.scroll < 100 ? 'home' : ''} menu-container`}>
-            {
-                menuLinks.map(link=>
-                    <div 
-                        className={`link ${current === link.scrollTo ? 'active' : ''}`} 
-                        key={link.name} 
-                        onClick={()=>handleClick(link.scrollTo)}
-                        >
-                        <div className='text'>{link.name}</div>
-                    </div>
-                )
-            }
-        </div>
+        <>
+            <div className={`${props.scroll < 100 ? 'home' : ''} desktop-menu`}>
+                {
+                    menuLinks.map(link =>
+                        <div 
+                            className={`link ${current === link.scrollTo ? 'active' : ''}`} 
+                            key={link.name} 
+                            onClick={()=>handleClick(link.scrollTo)}
+                            >
+                            <div className='text'>{link.name}</div>
+                        </div>
+                    )
+                }
+            </div>
+            <div 
+                onClick={()=> props.setShowMenu(!props.showMenu)}
+                className='phone-menu-button'
+            >{props.showMenu ? 'X' : 'M'}</div>
+        </>
     )
 }
 export default Menu

@@ -1,6 +1,6 @@
 @import './base.sass'
 
-.menu-container
+.desktop-menu
     @include flex(95%, 10%, row)
     justify-content: flex-end
     align-items: center
@@ -15,6 +15,11 @@
     background: rgba(0,2,27,0.8)
     backdrop-filter: blur(2px)
     transition: 1s
+
+    z-index: 1
+
+.phone-menu, .phone-menu-button
+    display: none
 
 .home
     height: 15%
@@ -35,6 +40,8 @@
         z-index: 2
 
         animation: 2s shine forwards
+
+
 .active
     @include active()
 
@@ -63,7 +70,32 @@
         left: 60%
 
 @media screen and (max-width: 980px)
-    .menu-container
-        height: 8vh
-        position: relative
-        font-size: 12px
+    .desktop-menu
+        display: none
+
+    .phone-menu-button
+        @include grid(40px, 40px)
+        position: fixed
+        top: 10px
+        right: 10px
+        color: $niceBlue
+        font-size: 20px
+
+        border-radius: 50%
+        border: 2px solid $niceBlue
+        z-index: 4
+
+    .phone-menu
+        @include flex(100%, 100%, column)
+        position: fixed
+        z-index: 3
+        background: black
+
+        align-items: center
+        justify-content: space-evenly
+
+        .phone-menu-link
+            @include grid(100%, 40px)
+            color: white
+            font-size: 20px
+        
