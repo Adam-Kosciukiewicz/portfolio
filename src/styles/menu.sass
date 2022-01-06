@@ -16,7 +16,7 @@
     backdrop-filter: blur(2px)
     transition: 1s
 
-    z-index: 1
+    z-index: 10
 
 .phone-menu, .phone-menu-button
     display: none
@@ -84,6 +84,15 @@
         border-radius: 50%
         border: 2px solid $niceBlue
         z-index: 4
+        background: black
+        transition: 0.3s
+
+        img
+            height: 60%
+
+        &:hover
+            cursor: pointer
+            background: #0c002b
 
     .phone-menu
         @include flex(100%, 100%, column)
@@ -98,4 +107,6 @@
             @include grid(100%, 40px)
             color: white
             font-size: 20px
+            &:hover
+                cursor: pointer
         

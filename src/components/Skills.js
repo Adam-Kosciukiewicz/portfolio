@@ -14,7 +14,7 @@ const Skills = ({forwardRef}) =>{
     },[])
     return(
         <div className='skills-container' ref={forwardRef}>
-            <div className='description' data-aos='fade-up'>
+            <div className='description'>
                 <div className='title'>Umiejętości</div>
                 <div className='text'>
                     ...................

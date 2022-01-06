@@ -103,12 +103,14 @@
         height: 100vh
         justify-content: center
         align-items: center
+        margin: 0
     
     .fast-access 
         display: none
 
     .fast-access-mobile
-        @include flex(20%,10%,row)
+        display: none
+        //@include flex(20%,10%,row)
         justify-content: space-evenly
     
         img
@@ -117,6 +119,7 @@
     .content
         height: 40%
         width: 100%
+        margin: 0
 
         .title
             font-size: 20px

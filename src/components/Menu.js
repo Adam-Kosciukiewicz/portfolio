@@ -9,14 +9,16 @@ const Menu = (props) => {
     useEffect(()=>{
         let refArray = Object.entries(props).filter(elem => typeof elem[1] === 'object')
 
-
         refArray.forEach(ref => {
             if (props.scroll < 300) {
                 setCurrent('home')
+            }else  if (refArray[refArray.length - 2][1].current.offsetTop <= props.scroll){
+                setCurrent(refArray[refArray.length - 1][0])
             }else if ((Math.round(ref[1].current.offsetTop / 100) * 100) - 200 === Math.round(props.scroll / 100) * 100){
                 setCurrent(ref[0])
             }
         })
+
     // eslint-disable-next-line react-hooks/exhaustive-deps
     },[props.scroll])
 
@@ -46,7 +48,13 @@ const Menu = (props) => {
             <div 
                 onClick={()=> props.setShowMenu(!props.showMenu)}
                 className='phone-menu-button'
-            >{props.showMenu ? 'X' : 'M'}</div>
+            >
+                {props.showMenu ?
+                    <img alt='icon' src='./assets/x.svg'/>
+                    :
+                    <img alt='icon' src='./assets/menu.svg'/>
+                }
+            </div>
         </>
     )
 }

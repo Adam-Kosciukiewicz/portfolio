@@ -1,10 +1,8 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState, useRef } from 'react'
 
 import './styles/base.sass'
 
 import PhoneMenu from './components/PhoneMenu'
-import Project from './components/Projects'
 import Contact from './components/Contack'
 import Skills from './components/Skills'
 import Menu from './components/Menu'
@@ -14,7 +12,6 @@ import Work from './components/Work'
 const App = () => {
   const [showMenu, setShowMenu] = useState(false)
   const [scroll, setScroll] = useState(0)
-  const project = useRef()
   const contact = useRef()
   const skills = useRef()
   const home = useRef()
@@ -29,6 +26,7 @@ const App = () => {
     window.addEventListener('scroll', event)
     
     return () => window.removeEventListener('scroll',event)
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   },[])
 
  
@@ -39,7 +37,6 @@ const App = () => {
           home={home} 
           skills={skills}
           work={work} 
-          project={project} 
           contact={contact}
           setShowMenu={setShowMenu}
           showMenu={showMenu}
@@ -50,7 +47,6 @@ const App = () => {
           home={home} 
           skills={skills}
           work={work} 
-          project={project} 
           contact={contact}
           setShowMenu={setShowMenu}
         ></PhoneMenu>
@@ -61,7 +57,6 @@ const App = () => {
         <Home forwardRef={home} next={skills}></Home>
         <Skills forwardRef={skills}></Skills>
         <Work forwardRef={work}></Work>
-        <Project forwardRef={project}></Project>
         <Contact forwardRef={contact}></Contact>
       </>
     </div>

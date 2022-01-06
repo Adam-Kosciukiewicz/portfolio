@@ -6,8 +6,16 @@ const Home = ({forwardRef, next}) => {
     return(
         <div className='home-container' ref={forwardRef}>
             <div className='fast-access'>
-                <img alt='icon' src='./assets/github.png'></img>
-                <img alt='icon' src='./assets/resume.svg'></img>
+                <img 
+                    onClick={()=> window.open('https://github.com/Adam-Kosciukiewicz','_blank')}
+                    src='./assets/github.png' 
+                    alt='icon' 
+                />
+                <img 
+                    onClick={()=> window.open('./assets/cv.pdf','_blank')}
+                    src='./assets/resume.svg' 
+                    alt='icon' 
+                />
             </div>
             <div className='content'>
                 <div className='title'>Junior Front-End Developer</div>

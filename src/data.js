@@ -2,7 +2,6 @@ export const menuLinks = [
     {name:'Home', scrollTo: 'home'},
     {name:'Umiejętości', scrollTo: 'skills'},
     {name:'Doświadczenie', scrollTo: 'work'},
-    {name:'Projekty', scrollTo: 'project'},
     {name:'Kontakt', scrollTo: 'contact'},
 ]
 
@@ -13,29 +12,11 @@ export const skills = [
     {name:'tailwind', link:'https://tailwindcss.com/'},
     {name:'JavaScript', link:'https://www.javascript.com/'},
     {name:'TypeScript', link:'https://www.typescriptlang.org/'},
-    {name:'jQuery', link:'https://jquery.com/'},
     {name:'React', link:'https://reactjs.org/'},
     {name:'Node', link:'https://nodejs.org/en/'},
     {name:'express', link:'https://expressjs.com/'},
     {name:'MongoDB', link:'https://www.mongodb.com/'},
     {name:'git', link:'https://git-scm.com/'},
-]
-
-export const projects = [
-    { 
-        name:'EFL news',
-        skills:['react','scss','express'],
-        features: [
-            {name: 'Serwer', description: 'Serwer node-express przesyłający API', icon: './assets/resume.svg'},
-            {name: 'API', description: 'Autorskie API stworzone na potrzeby projektu', icon: './assets/resume.svg'},
-        ],
-        imgs: [
-            'sportsite1.png',
-            'background.jpg',
-            'background.jpg',
-        ],
-        description: 'Strona przedstawiająca drużyny, wyniki meczy i rankingi z sezonu Europejskiej Ligi Futbolu, generowane na podstawie autorskiego API przesyłanego przez serwer napisany w ekspresie',
-    }
 ]
 
 export const employment = [
@@ -48,9 +29,8 @@ export const employment = [
     }
 ]
 
-
 export const contactData = {
-    email: 'adamvwv6@gmail.com',
+    email: 'adamkosciukiewiczkontakt@gmail.com',
     phone: '537135840',
     github: 'https://github.com/Adam-Kosciukiewicz',
 }

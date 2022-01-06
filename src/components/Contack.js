@@ -38,7 +38,10 @@ const Contact = ({forwardRef}) =>{
                 <div className='label'>{contactData.github.split('//')[1]}</div>
             </div>
 
-            <div className='button'>Obejrzyj moje CV</div>
+            <div 
+                onClick={()=> window.open('./assets/cv.pdf','_blank')}
+                className='button' 
+            >Obejrzyj moje CV</div>
         </div>
     )
 }
